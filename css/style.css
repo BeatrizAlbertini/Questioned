@@ -15,6 +15,14 @@ body {
     text-shadow: 2px 2px #000;
 }
 
+.icones{
+	margin-left: 70px;
+}
+
+.element-style{
+	margin-left: 1px;
+}
+
 .tamanho{
 	font-size: 20px;
 }
@@ -45,7 +53,31 @@ i.tamanho-logo{
 .colornav{
 	background-color: #2fbc6e;
 }
+
+.tamanha{
+	font-size: 50px
+}
+
+.imagem{
+	width: 600px
+}
 /* Inicio do meu CSS */
+
+.pequena{
+	width: 110px
+}
+
+.margem1{
+    margin-left: -100px;
+}
+
+.margem2{
+	margin-left: -199px;
+}
+
+.letratamanho{
+	font-size: 30px
+}
 
 
 /* Fim do meu CSS */

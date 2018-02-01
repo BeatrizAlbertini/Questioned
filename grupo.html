@@ -6,7 +6,7 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 
-    <title>Questioned</title>
+    <title>Blog Home - Mastertech Template</title>
 
     <!-- Bootstrap core CSS -->
     <link href="vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
@@ -17,7 +17,7 @@
 
 </head>
 
-<body ng-app="questioned">
+<body>
 
     <!-- Navegação -->
     <nav class="navbar navbar-expand-lg navbar-dark colornav fixed-top">
@@ -50,124 +50,96 @@
     <!-- /Navegação -->
 
     <!-- Conteúdo da Pagina -->
-    <div class="container" ng-controller="QuestionedController">
-
+    <div class="container">
 
         <div class="row">
 
             <!-- Blog Entries Column -->
             <div class="col-md-8">
-
-                <h1 class="my-4">You are the last piece of the puzzle!</h1>
-
-<div class="card mb-4" ng-repeat="item in perguntas">
-                    <div class="card-body">
-                        <p class="card-title"> <B>{{item.titulo}}</B> </p>
-                        <p class="card-text"> <B> Luiz: </B> {{item.pergunta}}</p>
-
-                        <a href="#" class="btn btn-primary" ng-click="exibir = !exibir">Responder &rarr;</a>
-
-                        <input type="text" placeholder="Resposta" ng-model="dados.resposta" ng-show="exibir">
-
-
-
-
-                        <a href="#"><i class="fas fa-heart"></i>curti!</a> 
-                        <a href="#"><i class="far fa-frown"></i>dislike</a>
-                        <a href="#"><i class="far fa-star"></i>favorites</a>
-                        <a href="#"><i class="fas fa-trash-alt"></i>trash</a>
-                        <a href="#"><i class="fas fa-video"></i>chat</a>
-                    </div>
-                    <div class="card-footer text-muted">
-                        Postado em {{item.data}} por
-                        <a href="#">Luiz</a>
-                    </div>
-                </div>
-
-
                 <div class="card mb-4">
                     <div class="card-body">
-                        <h2 class="card-title">Poste sua pergunta!</h2>
+                        <h2 class="card-title tamanha">Crie seu grupo aqui!</h2>
+                        <img class="imagem"src="https://scontent.frao1-2.fna.fbcdn.net/v/t34.0-12/27591645_1790200407680592_1858711524_n.png?oh=0aa68a3395b6e7efdb1ae87b1d81f0f5&oe=5A75716A">
                              <div class="form-group">
-                             <input type="text" class="form-control" id="usr" placeholder="Título" ng-model="dados.titulo">
-                             <input type="text" class="form-control" id="usr" placeholder="Pergunta" ng-model="dados.pergunta">
+                             <input type="text" class="form-control" id="usr">
                              </div>
-                        <button class="btn btn-secondary" type="button" ng-click="inserirPergunta()">Postar</button>
+                        <button class="btn btn-secondary" type="button">Criar</button>
                     </div>
                 </div>
 
                 <!-- Blog Post -->
-                        
-                <!-- Blog Post -->
- <!--                <div class="card mb-4">
-                    <div class="card-body">
-                        <p> <class="card-title"> <B> Lucas Machado:</B> O que é feudo? </p>
-                        <p class="card-text"> <B> Beatriz Campelo: </B>
-
- É a terra outorgada por um suserano ao vassalo, em troca de fidelidade e ajuda militar. Essa prática desenvolveu-se na Idade Média, após o colapso do Império Romano e foi a base para o estabelecimento de uma aristocracia fundiária. A palavra "feudo", de origem germânica (do germânico vieh, pelo frâncico fëhu, significando gado, posse, ou propriedade, pelo b.-lat. feudu, foi latinizada e no fim do século IX aparece na região do Midi (sul da França) como fevum, talvez por confusão com a palavra fiscum, que designava, à época carolíngia, os grandes domínios reais - e com uma ligação com beneficium, o que evocaria a origem pública do feudo no sul da Europa (o beneficium designa a concessão de uma terra por um agente público, em troca de serviços públicos). O feudalismo era a base rural desenvolvida na idade média. Do feudo nasceu o chamado feudalismo, que consistia numa organização política e social que se baseava na relação entre suseranos e vassalos. No feudo se produzia apenas o que seria consumido nele mesmo.
-                      </p>
-                        <a href="#" class="icones"><i class="fas fa-heart"></i>curti!</a> 
-                        <a href="#" class="icones"><i class="far fa-frown"></i>dislike</a>
-                        <a href="#" class="icones"><i class="far fa-star"></i>favorites</a>
-                         <a href="#" class="icones"><i class="fas fa-trash-alt"></i>trash</a>
-                        <a href="#" class="icones"><i class="fas fa-video"></i>chat</a>
-                    </div>
-                    <div class="card-footer text-muted">
-                        Posted on January 1, 2018 by
-                        <a href="#">Beatriz Campelo</a>
-                       
-                    </div>
-                </div>
-
-                Blog Post
                 <div class="card mb-4">
                     <div class="card-body">
-                        <p class="card-title"> <B/> Bernardo Lopez: </B>  Pelo amor de Deus me respondam! (Uerj)
-O poliedro acima, com exatamente trinta faces quadrangulares numeradas de 1 a 30, é usado comoum dado, em um jogo. Admita que esse dado seja perfeitamente equilibradoe que, ao ser lançado, cada face tenha a mesma probabilidade de ser sorteada.
-Calcule:
-a) a probabilidade de obter um número primo ou múltiplo de 5, ao lançar esse dado uma única vez;
-b) o número de vértices do poliedro.</p>
-
-                <p class="card-title"> <B> Carla Souza: </B> Calma, vai dar tudo certo, só repirar. Vê se ajuda:
-a) O espaço amostral ² é ² = {1, 2, 3, ..., 30}
-Sejam os eventos: A: número primo B: múltiplo de 5
-Temos:
-A = { 2, 3, 5, 7, 11, 13, 17, 19, 23, 29} e B = {5, 10, 15, 20, 25, 30}
-Donde P(A) = 10/30 e P(B) = 6/30.
-Mas A º B = { 5 }, então P(A º = 1/30.
-Logo
-P(A» = P(A) + P(B) - P(A º P(A» = (10/30) + (6/30) - (1/30) = 1/2.
-b) Como F = 30, o número de arestas é dado por 2A = 4F Ì A = 60
-Da relação de Euler, temos:
-V + F = A +2
-V = 62 - 30 = 32                                    </p>         
-
-                   <div class="row">
-                                      <a href="#"><i class="fas fa-heart"></i>curti!</a>
-                     <a href="#" class="icones"><i class="far fa-frown"></i>dislike</a>
-                      <a href="#" class="icones"><i class="far fa-star"></i>favorites</a>
-                       <a href="#" class="icones"><i class="fas fa-trash-alt"></i>trash</a>
-                        <a href="#" class="icones"><i class="fas fa-video"></i>chat</a>
-                   </div>
-
+                        <p class="card-title"></p>
+                        <p class="card-text"></p>
                     </div>
                     <div class="card-footer text-muted">
-                        Posted on January 1, 2018 by
-                        <a href="#">Carla Souza</a>
-            
+                        
+                        <a href="#"></a>
                     </div>
-                </div> -->
+                </div>
+
+                <!-- Blog Post -->
+                <div class="card mb-4">
+                    <div class="card-body">
+                        <p class="card-title letratamanho"><B> Mackenzie 3B08</B></p>
+                        <div class="card-text row"> 
+
+                            <div class="col-md-4 col-lg-4 col-sm-12 col-xs-12">
+                            <img class="pequena" src="https://scontent.frao1-2.fna.fbcdn.net/v/t1.0-9/17309586_726160200885926_1470873037212427371_n.jpg?oh=3aef1a5d85597573000fbaa700a69841&oe=5AEC67F8"> 
+                            <p> <B>   Alicia Scalioni</B></p>
+                            </div>
+
+                            <div class="col-md-4 col-lg-4 col-sm-12 col-xs-12">
+                            <img class="pequena margem1" src="https://scontent.frao1-2.fna.fbcdn.net/v/t1.0-9/21743152_739576356227445_2415192441539449632_n.jpg?oh=708efbbca2136ad8d976e57702d0f437&oe=5B16D5B2"> 
+                            <p class="margem1"><B>Beatriz Albertini</B></p>
+                            </div>
+
+                            <div class="col-md-4 col-lg-4 col-sm-12 col-xs-12">
+                            <img  class="pequena margem2" src="https://scontent.frao1-2.fna.fbcdn.net/v/t1.0-9/18342702_822432184575602_5616197343867566019_n.jpg?oh=4341b5c74726c2f6d5c22411a8ab1cc3&oe=5B24B2BC">
+                            <p class="margem2"><B>Leonardo Ferreira</B> </p>
+                             </div>
+
+                        </div>
+                    </div>
+                            <div class="card mb-4">
+                    <div class="card-body">
+                        <p class="card-title letratamanho"><B> Família Educateen</B></p>
+                        <div class="card-text row"> 
+
+                            <div class="col-md-4 col-lg-4 col-sm-12 col-xs-12">
+                            <img class="pequena" src="https://scontent.frao1-2.fna.fbcdn.net/v/t1.0-9/23722776_1552007784885556_5353154429328589812_n.jpg?oh=48818e588d58d114ea78cbe648a2c217&oe=5B170CE2"> 
+                            <p> <B>   Luiz Augusto</B></p>
+                            </div>
+
+                            <div class="col-md-4 col-lg-4 col-sm-12 col-xs-12">
+                            <img class="pequena margem1" src="https://scontent.frao1-2.fna.fbcdn.net/v/t1.0-9/21743152_739576356227445_2415192441539449632_n.jpg?oh=708efbbca2136ad8d976e57702d0f437&oe=5B16D5B2"> 
+                            <p class="margem1"><B>Beatriz Albertini</B></p>
+                            </div>
+
+                            <div class="col-md-4 col-lg-4 col-sm-12 col-xs-12">
+                            <img  class="pequena margem2" src="https://scontent.frao1-2.fna.fbcdn.net/v/t1.0-9/27067255_934323900067289_2423863783255535926_n.jpg?oh=485c28d6390cf34b3dcb5b400fa0130f&oe=5AE61880">
+                            <p class="margem2"><B> Jayane Gomes</B> </p>
+                             </div>
+
+                        </div>
+                    </div>
+                    <div class="card-footer text-muted">
+                        <a href="#"></a>
+                    </div>
+                </div>
+
+                <!-- Blog Post -->
+                <div class="card mb-4">
+                    <div class="card-body">
+                        <p class="card-title"> 
+                <p class="card-title">                          
+                    </div>
+                    <div class="card-footer text-muted">
+                    </div>
+                </div>
 
                 <!-- Numeração da página -->
-                <ul class="pagination justify-content-center mb-4">
-                    <li class="page-item">
-                        <a class="page-link" href="#">&larr; Older</a>
-                    </li>
-                    <li class="page-item disabled">
-                        <a class="page-link" href="#">Newer &rarr;</a>
-                    </li>
-                </ul>
-
             </div>
 
             <!-- Sidebar Widgets Column -->
@@ -217,9 +189,8 @@ V = 62 - 30 = 32                                    </p>
 
                 <!-- Side Widget -->
                 <div class="card my-4">
-                    <a href="grupo.html">
-                     <h5 class="card-header">
-                     <button class="btn btn-secondary" type="button">+</button> </a>     Crie um grupo! </h5>
+                    <h5 class="card-header">
+                    <a href="grupo.html"> <button class="btn btn-secondary" type="button">+</button></a> Crie um grupo! </h5>
                     <div class="card-body">
                         Crie um grupo para falar com seus amigos e descobrir o que eles estão fazendo!           
                               
@@ -266,14 +237,8 @@ V = 62 - 30 = 32                                    </p>
     <script src="vendor/popper/popper.min.js"></script>
     <script src="vendor/bootstrap/js/bootstrap.min.js"></script>
 
-        <!-- é necessáro incluir o arquivo do framework -->
-        <script src="js/angular.min.js"></script>
-        <script src="js/app.js"></script>
-
     <!-- Importa o Javascript utilizado neste projeto -->
     <script src="js/script.js"></script>
-<script defer src="https://use.fontawesome.com/releases/v5.0.6/js/all.js"></script>
-
 
 </body>
 
