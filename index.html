@@ -17,7 +17,7 @@
 
 </head>
 
-<body>
+<body ng-app="questioned">
 
     <!-- Navegação -->
     <nav class="navbar navbar-expand-lg navbar-dark colornav fixed-top">
@@ -50,7 +50,8 @@
     <!-- /Navegação -->
 
     <!-- Conteúdo da Pagina -->
-    <div class="container">
+    <div class="container" ng-controller="QuestionedController">
+
 
         <div class="row">
 
@@ -58,56 +59,44 @@
             <div class="col-md-8">
 
                 <h1 class="my-4">You are the last piece of the puzzle!</h1>
+
+<div class="card mb-4" ng-repeat="item in perguntas">
+                    <div class="card-body">
+                        <p class="card-title"> <B>{{item.titulo}}</B> </p>
+                        <p class="card-text"> <B> Luiz: </B> {{item.pergunta}}</p>
+
+                        <a href="#" class="btn btn-primary" ng-click="exibir = !exibir">Responder &rarr;</a>
+
+                        <input type="text" placeholder="Resposta" ng-model="dados.resposta" ng-show="exibir">
+
+
+
+
+
+                    </div>
+                    <div class="card-footer text-muted">
+                        Postado em {{item.data}} por
+                        <a href="#">Luiz</a>
+                    </div>
+                </div>
+
+
                 <div class="card mb-4">
                     <div class="card-body">
                         <h2 class="card-title">Poste sua pergunta!</h2>
                              <div class="form-group">
-                             <input type="text" class="form-control" id="usr">
+                             <input type="text" class="form-control" id="usr" placeholder="Título" ng-model="dados.titulo">
+                             <input type="text" class="form-control" id="usr" placeholder="Pergunta" ng-model="dados.pergunta">
                              </div>
-                        <button class="btn btn-secondary" type="button">Postar</button>
+                        <button class="btn btn-secondary" type="button" ng-click="inserirPergunta()">Postar</button>
                     </div>
                 </div>
 
                 <!-- Blog Post -->
-                <div class="card mb-4">
-                    <div class="card-body">
-                        <p class="card-title"> <B>Júlia Ruiz: </B> Alguém sabe resolver??? Urgente
-                            (UNICAMP) Em sua obra Os sans-culottes de Paris, o
-historiador Albert Soboul escreveu: “Os cidadãos de
-aparência pobre e que em outros tempos não se atreveriam
-a apresentar-se em lugares reservados a pessoas elegantes
-passeavam agora nos mesmos locais que os ricos, de cabeça
-erguida.”
-(Citado por Eric Hobsbawm, A Era das Revoluções, São
-Paulo, Paz e Terra, 1976, p.231.)
-(nota: sans-culottes significa “sem culotes”, “sem-calças”)
-a) Caracterize o movimento dos sans-culottes na Revolução
-Francesa.
-b) Compare o movimento dos sans-culottes com o
-movimento dos sem-terra no Brasil.</p>
-                        <p class="card-text"> <B> Jayane Gomes: </B> Claro! Se tiver dúvida so chamar. 
-                            a) O chamado movimento dos sans-culottes na época da
-Revolução Francesa era caracteristicamente urbano,
-integrado pelos marginalizados da sociedade. No processo
-revolucionário, via de regra, estiveram associados às
-posições mais radicais no interior da revolução. Usavam
-calças compridas no lugar do traje normal do Antigo
-Regime, que eram os calções curtos(culotte) .
-b) Existem alguns elementos em comum entre esses
-movimentos no sentido de expressar, cada um à sua
-maneira, grupos sociais marginalizados na sociedade.
-Entretanto ambos possuem raízes
-diferentes.</p>
-                        <a href="#" class="btn btn-primary">Read More &rarr;</a>
-                    </div>
-                    <div class="card-footer text-muted">
-                        Posted on January 1, 2017 by
-                        <a href="#">Jayane Gomes</a>
-                    </div>
-                </div>
+
 
                 <!-- Blog Post -->
-                <div class="card mb-4">
+ <!--                <div class="card mb-4">
                     <div class="card-body">
                         <p> <class="card-title"> <B> Lucas Machado:</B> O que é feudo? </p>
                         <p class="card-text"> <B> Beatriz Campelo: </B>
@@ -120,7 +109,7 @@ diferentes.</p>
                     </div>
                 </div>
 
-                <!-- Blog Post -->
+                Blog Post
                 <div class="card mb-4">
                     <div class="card-body">
                         <p class="card-title"> <B/> Bernardo Lopez: </B>  Pelo amor de Deus me respondam! (Uerj)
@@ -149,7 +138,7 @@ V = 62 - 30 = 32
                         Posted on January 1, 2017 by
                         <a href="#">Carla Souza</a>
                     </div>
-                </div>
+                </div> -->
 
                 <!-- Numeração da página -->
                 <ul class="pagination justify-content-center mb-4">
@@ -256,6 +245,10 @@ V = 62 - 30 = 32
     <script src="vendor/jquery/jquery.min.js"></script>
     <script src="vendor/popper/popper.min.js"></script>
     <script src="vendor/bootstrap/js/bootstrap.min.js"></script>
+
+        <!-- é necessáro incluir o arquivo do framework -->
+        <script src="js/angular.min.js"></script>
+        <script src="js/app.js"></script>
 
     <!-- Importa o Javascript utilizado neste projeto -->
     <script src="js/script.js"></script>
