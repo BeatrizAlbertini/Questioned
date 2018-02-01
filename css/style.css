@@ -16,7 +16,7 @@ body {
 }
 
 .icones{
-	margin-left: 70px;
+	margin-left: 30px;
 }
 
 .element-style{
@@ -28,7 +28,7 @@ body {
 }
 
 i.tamanho-logo{
-	font-size: 6vh;
+	font-size: 100px;
 }
 /*Ajusta o layout de acordo com o tamanho da tela*/
 
@@ -77,6 +77,11 @@ i.tamanho-logo{
 
 .letratamanho{
 	font-size: 30px
+}
+
+.logos {
+    font-size: 35px !important;
+    text-shadow: 2px 2px #000 !important;
 }
 
 .denuncia {

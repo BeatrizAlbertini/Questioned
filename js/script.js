@@ -70,7 +70,7 @@ $(".mytext").on("keyup", function(e){
 resetChat();
 
 //-- Print Messages
-insertChat("me", "Olá, não entendi!?", 3500);  
+insertChat("me", "Olá, não entendi!", 3500);  
 	insertChat("you", "Ué! oq?", 7000);
 	insertChat("me", "Tudo!! Sou um lixo em Mat!", 10500);
 	insertChat("you", "Calma! Vamos lá.",14000);
