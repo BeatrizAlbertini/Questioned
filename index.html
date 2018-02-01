@@ -6,7 +6,7 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 
-    <title>Questioned</title>
+    <title>Blog Home - Mastertech Template</title>
 
     <!-- Bootstrap core CSS -->
     <link href="vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
@@ -17,7 +17,7 @@
 
 </head>
 
-<body ng-app="questioned">
+<body>
 
     <!-- Navegação -->
     <nav class="navbar navbar-expand-lg navbar-dark colornav fixed-top">
@@ -29,7 +29,7 @@
             <div class="collapse navbar-collapse" id="navbarResponsive">
                 <ul class="navbar-nav ml-auto">
                     <li class="nav-item active">
-                        <a class="nav-link tamanho" href="index.html">Home
+                        <a class="nav-link tamanho" href="#">Home
                 <span class="sr-only">(current)</span>
               </a>
                     </li>
@@ -40,7 +40,7 @@
                         <a class="nav-link tamanho" href="#">Perfil</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link tamanho" href="Login.html"> Login </a>
+                        <a class="nav-link tamanho" href="Login.html" target="_blank"> Login </a>
                         
                     </li>
                 </ul>
@@ -50,8 +50,7 @@
     <!-- /Navegação -->
 
     <!-- Conteúdo da Pagina -->
-    <div class="container" ng-controller="QuestionedController">
-
+    <div class="container">
 
         <div class="row">
 
@@ -59,51 +58,72 @@
             <div class="col-md-8">
 
                 <h1 class="my-4">You are the last piece of the puzzle!</h1>
-
-<div class="card mb-4" ng-repeat="item in perguntas">
-                    <div class="card-body">
-                        <p class="card-title"> <B>{{item.titulo}}</B> </p>
-                        <p class="card-text"> <B> Luiz: </B> {{item.pergunta}}</p>
-
-                        <a href="#" class="btn btn-primary" ng-click="exibir = !exibir">Responder &rarr;</a>
-
-                        <input type="text" placeholder="Resposta" ng-model="dados.resposta" ng-show="exibir">
-
-
-
-
-                        <a href="#"><i class="fas fa-heart"></i>curti!</a> 
-                        <a href="#"><i class="far fa-frown"></i>dislike</a>
-                        <a href="#"><i class="far fa-star"></i>favorites</a>
-                        <a href="#"><i class="fas fa-trash-alt"></i>trash</a>
-                        <a href="#"><i class="fas fa-video"></i>chat</a>
-                    </div>
-                    <div class="card-footer text-muted">
-                        Postado em {{item.data}} por
-                        <a href="#">Luiz</a>
-                    </div>
-                </div>
-
-
                 <div class="card mb-4">
                     <div class="card-body">
                         <h2 class="card-title">Poste sua pergunta!</h2>
                              <div class="form-group">
-                             <input type="text" class="form-control" id="usr" placeholder="Título" ng-model="dados.titulo">
-                             <input type="text" class="form-control" id="usr" placeholder="Pergunta" ng-model="dados.pergunta">
+                             <input type="text" class="form-control" id="usr">
                              </div>
-                        <button class="btn btn-secondary" type="button" ng-click="inserirPergunta()">Postar</button>
+                        <button class="btn btn-secondary" type="button">Postar</button>
                     </div>
                 </div>
 
                 <!-- Blog Post -->
-                        
+                <div class="card mb-4">
+                    <div class="card-body">
+                        <p class="card-title"> <B>Júlia Ruiz: </B> Alguém sabe resolver??? Urgente
+                            (UNICAMP) Em sua obra Os sans-culottes de Paris, o
+historiador Albert Soboul escreveu: “Os cidadãos de
+aparência pobre e que em outros tempos não se atreveriam
+a apresentar-se em lugares reservados a pessoas elegantes
+passeavam agora nos mesmos locais que os ricos, de cabeça
+erguida.”
+(Citado por Eric Hobsbawm, A Era das Revoluções, São
+Paulo, Paz e Terra, 1976, p.231.)
+(nota: sans-culottes significa “sem culotes”, “sem-calças”)
+a) Caracterize o movimento dos sans-culottes na Revolução
+Francesa.
+b) Compare o movimento dos sans-culottes com o
+movimento dos sem-terra no Brasil.</p>
+                        <p class="card-text"> <B> Jayane Gomes: </B> Claro! Se tiver dúvida so chamar. 
+                            a) O chamado movimento dos sans-culottes na época da
+Revolução Francesa era caracteristicamente urbano,
+integrado pelos marginalizados da sociedade. No processo
+revolucionário, via de regra, estiveram associados às
+posições mais radicais no interior da revolução. Usavam
+calças compridas no lugar do traje normal do Antigo
+Regime, que eram os calções curtos(culotte) .
+b) Existem alguns elementos em comum entre esses
+movimentos no sentido de expressar, cada um à sua
+maneira, grupos sociais marginalizados na sociedade.
+Entretanto ambos possuem raízes
+diferentes.</p>
+                        <a><i class="fas fa-heart"></i>curti!</a> 
+                        <a><i class="far fa-frown"></i>dislike</a>
+                        <a><i class="far fa-star"></i>favorites</a>
+                        <a><i class="fas fa-trash-alt"></i>trash</a>
+                        <a><i class="fas fa-video"></i>chat</a>
+                        <button class="btn btn-default btn-xs dropdown-toggle denuncia" type="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+    <i class="fas fa-bullhorn"></i> <span class="caret"></span>
+  </button>
+  <ul class="dropdown-menu">
+    Denúnciar conteúdo
+  </ul>
+</div>
+
+                      
+                    </div>
+                    <div class="card-footer text-muted">
+                        Posted on January 1, 2017 by
+                        <a href="#">Jayane Gomes</a>
+                    </div>
+                </div>
+
                 <!-- Blog Post -->
- <!--                <div class="card mb-4">
+                <div class="card mb-4">
                     <div class="card-body">
                         <p> <class="card-title"> <B> Lucas Machado:</B> O que é feudo? </p>
                         <p class="card-text"> <B> Beatriz Campelo: </B>
-
  É a terra outorgada por um suserano ao vassalo, em troca de fidelidade e ajuda militar. Essa prática desenvolveu-se na Idade Média, após o colapso do Império Romano e foi a base para o estabelecimento de uma aristocracia fundiária. A palavra "feudo", de origem germânica (do germânico vieh, pelo frâncico fëhu, significando gado, posse, ou propriedade, pelo b.-lat. feudu, foi latinizada e no fim do século IX aparece na região do Midi (sul da França) como fevum, talvez por confusão com a palavra fiscum, que designava, à época carolíngia, os grandes domínios reais - e com uma ligação com beneficium, o que evocaria a origem pública do feudo no sul da Europa (o beneficium designa a concessão de uma terra por um agente público, em troca de serviços públicos). O feudalismo era a base rural desenvolvida na idade média. Do feudo nasceu o chamado feudalismo, que consistia numa organização política e social que se baseava na relação entre suseranos e vassalos. No feudo se produzia apenas o que seria consumido nele mesmo.
                       </p>
                         <a href="#" class="icones"><i class="fas fa-heart"></i>curti!</a> 
@@ -111,15 +131,23 @@
                         <a href="#" class="icones"><i class="far fa-star"></i>favorites</a>
                          <a href="#" class="icones"><i class="fas fa-trash-alt"></i>trash</a>
                         <a href="#" class="icones"><i class="fas fa-video"></i>chat</a>
+                        <div class="btn-group">
+  <button class="btn btn-default btn-xs dropdown-toggle denuncia" type="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+    <i class="fas fa-bullhorn"></i> <span class="caret"></span>
+  </button>
+  <ul class="dropdown-menu">
+    Denúnciar conteúdo
+  </ul>
+</div>
                     </div>
                     <div class="card-footer text-muted">
-                        Posted on January 1, 2018 by
+                        Posted on January 1, 2017 by
                         <a href="#">Beatriz Campelo</a>
                        
                     </div>
                 </div>
 
-                Blog Post
+                <!-- Blog Post -->
                 <div class="card mb-4">
                     <div class="card-body">
                         <p class="card-title"> <B/> Bernardo Lopez: </B>  Pelo amor de Deus me respondam! (Uerj)
@@ -148,15 +176,23 @@ V = 62 - 30 = 32                                    </p>
                       <a href="#" class="icones"><i class="far fa-star"></i>favorites</a>
                        <a href="#" class="icones"><i class="fas fa-trash-alt"></i>trash</a>
                         <a href="#" class="icones"><i class="fas fa-video"></i>chat</a>
+                        <button class="btn btn-default btn-xs dropdown-toggle denuncia" type="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+    <i class="fas fa-bullhorn"></i> <span class="caret"></span>
+  </button>
+  <ul class="dropdown-menu">
+    Denúnciar conteúdo
+  </ul>
+</div>
                    </div>
+
 
                     </div>
                     <div class="card-footer text-muted">
-                        Posted on January 1, 2018 by
+                        Posted on January 1, 2017 by
                         <a href="#">Carla Souza</a>
             
                     </div>
-                </div> -->
+                </div>
 
                 <!-- Numeração da página -->
                 <ul class="pagination justify-content-center mb-4">
@@ -217,9 +253,7 @@ V = 62 - 30 = 32                                    </p>
 
                 <!-- Side Widget -->
                 <div class="card my-4">
-                    <a href="grupo.html">
-                     <h5 class="card-header">
-                     <button class="btn btn-secondary" type="button">+</button> </a>     Crie um grupo! </h5>
+                    <h5 class="card-header"> <button class="btn btn-secondary" type="button">+</button> Crie um grupo! </h5>
                     <div class="card-body">
                         Crie um grupo para falar com seus amigos e descobrir o que eles estão fazendo!           
                               
@@ -238,7 +272,7 @@ V = 62 - 30 = 32                                    </p>
   <div class="modal-dialog" role="document">
     <div class="modal-content">
       <div class="modal-header colornav">
-        <h5 class="modal-title" id="exampleModalLabel"><i class="fa fa-cube tamanho-logo colorshadow colorLogin"></i>   Quem somos nós</h5>
+        <h5 class="modal-title" id="exampleModalLabel"><i class="fa fa-cube tamanho-logo colorshadow colorLogin"></i>Quem somos nós</h5>
         <button type="button" class="close" data-dismiss="modal" aria-label="Close">
           <span aria-hidden="true">&times;</span>
         </button>
@@ -256,7 +290,7 @@ V = 62 - 30 = 32                                    </p>
     <!-- Rodapé -->
     <footer class="py-5 bg-dark">
         <div class="container">
-            <p class="m-0 text-center text-white">Copyright &copy; Questioned 2018</p>
+            <p class="m-0 text-center text-white">Copyright &copy; Questioned 2017</p>
         </div>
     </footer>
     <!-- /Rodapé -->
@@ -265,10 +299,6 @@ V = 62 - 30 = 32                                    </p>
     <script src="vendor/jquery/jquery.min.js"></script>
     <script src="vendor/popper/popper.min.js"></script>
     <script src="vendor/bootstrap/js/bootstrap.min.js"></script>
-
-        <!-- é necessáro incluir o arquivo do framework -->
-        <script src="js/angular.min.js"></script>
-        <script src="js/app.js"></script>
 
     <!-- Importa o Javascript utilizado neste projeto -->
     <script src="js/script.js"></script>
