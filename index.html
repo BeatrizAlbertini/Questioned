@@ -22,7 +22,7 @@
     <!-- Navegação -->
     <nav class="navbar navbar-expand-lg navbar-dark colornav fixed-top">
         <div class="container">
-            <a class="navbar-brand" href=""><i class="fa fa-cube tamanho-logo colorshadow"></i><B class="logo">  QUESTIONED</B></a>
+            <a class="navbar-brand" href=""><i class="fa fa-cube navbar-brand logos"></i><B class="logo">  QUESTIONED</B></a>
             <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
           <span class="navbar-toggler-icon"></span>
         </button>
@@ -64,20 +64,22 @@
                     <div class="card-body">
                         <p class="card-title"> <B>{{item.titulo}}</B> </p>
                         <p class="card-text"> <B> Luiz: </B> {{item.pergunta}}</p>
-
-                        <a href="#" class="btn btn-primary" ng-click="exibir = !exibir">Responder &rarr;</a>
+                        <p class="card-text"> <B> Bia: </B> {{item.resposta}} </p>
+                        <a href="#" class="btn btn-primary" ng-click="inserirResposta(item)">Responder &rarr;</a>
 
                         <input type="text" placeholder="Resposta" ng-model="dados.resposta" ng-show="exibir">
 
 
 
 
-                        <a href="#"><i class="fas fa-heart"></i>curti!</a> 
-                        <a href="#"><i class="far fa-frown"></i>dislike</a>
-                        <a href="#"><i class="far fa-star"></i>favorites</a>
-                        <a href="#"><i class="fas fa-trash-alt"></i>trash</a>
-                        <a href="#"><i class="fas fa-video"></i>chat</a>
-                    </div>
+                        <a href="#"><i class="fas fa-heart"></i>   </a> 
+                        <a href="#"><i class="far fa-frown"></i>   </a>
+                        <a href="#"><i class="far fa-star"></i>    </a>
+                        <a href="#"><i class="fas fa-trash-alt"></i>    </a>
+                        <a href="#"><i class="far fa-comment-alt"></i>    </a>
+                        
+                    
+                           </div>
                     <div class="card-footer text-muted">
                         Postado em {{item.data}} por
                         <a href="#">Luiz</a>
@@ -97,7 +99,7 @@
                 </div>
 
                 <!-- Blog Post -->
-                        
+
                 <!-- Blog Post -->
  <!--                <div class="card mb-4">
                     <div class="card-body">
