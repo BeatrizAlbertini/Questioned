@@ -1,90 +1,3 @@
-/*!
- * Mastertech - Blog Home
- * Insira seu código entre os comentários localizados no fim desta pagina ou/e
- * Edite o código do layout original
- */
-
-
-/* Edite o código abaixo para mudar as opções do layout original */
-
-body {
-    padding-top: 54px;
-}
-.logo{
-	font-size: 33px;
-    text-shadow: 2px 2px #000;
-    }
-
-.icones{
-	margin-left: 30px;
-}
-
-.element-style{
-	margin-left: 1px;
-}
-
-.tamanho{
-	font-size: 20px;
-}
-
-#tamanho-logo{
-	font-size: 6vh;
-}
-/*Ajusta o layout de acordo com o tamanho da tela*/
-
-@media (min-width: 992px) {
-    body {
-        padding-top: 100px;
-    }
-}
-.styleLogin
-{
-	padding: 10% 35% 0% 35%;
-}
-
-.colorLogin{
-	color: white;
-}
-
-.colornav{
-	background-color: #2fbc6e;
-}
-
-.tamanha{
-	font-size: 50px
-}
-
-.imagem{
-	width: 600px
-}
-/* Inicio do meu CSS */
-
-.pequena{
-	width: 110px
-}
-
-.margem1{
-    margin-left: -100px;
-}
-
-.margem2{
-	margin-left: -199px;
-}
-
-.letratamanho{
-	font-size: 30px
-}
-
-.logos {
-    font-size: 35px !important;
-    text-shadow: 2px 2px #000 !important;
-}
-
-.denuncia {
-    background-color: #fff;
-    color: #ff0632;
-}
-
 .mytext{
     border:0;padding:5px;background:whitesmoke;color:black;
 }
@@ -128,7 +41,7 @@ body {
     border-radius: 25px;
     border: 2px solid #FCF6B1;
     padding:0;  
-    margin-left: 35%;
+    margin-left: 25%;
     margin-bottom: 70px;
 }
 .frame > div:last-of-type{
@@ -138,7 +51,7 @@ ul {
     width:100%;
     list-style-type: none;
     padding:18px;
-    /*position:absolute;*/
+    position:absolute;
     bottom:32px;
     display:flex;
     flex-direction: column;
@@ -183,10 +96,5 @@ input:focus{
 }   
 
 .row{
-    /*margin-left: 37.5%*/
+    margin-left: 37.5%
 }
-
-#tamanhologo {
-	font-size: 6vh;
-}
-/* Fim do meu CSS */

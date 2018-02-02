@@ -6,7 +6,7 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 
-    <title>Questioned</title>
+    <title>Blog Home - Mastertech Template</title>
 
     <!-- Bootstrap core CSS -->
     <link href="vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
@@ -29,18 +29,18 @@
             <div class="collapse navbar-collapse" id="navbarResponsive">
                 <ul class="navbar-nav ml-auto">
                     <li class="nav-item active">
-                        <a class="nav-link tamanho" href="index.html">Home
-                <span class="sr-only">(current)</span>
-              </a>
+                        <a class="nav-link tamanho" href="#">Home
+                            <span class="sr-only">(current)</span>
+                        </a>
                     </li>
                     <li class="nav-item">
                         <a class="nav-link tamanho" href="#" data-toggle="modal" data-target="#exampleModal" >Sobre</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link tamanho" href="#">Perfil</a>
+                        <a class="nav-link tamanho" href="perfiljayane.html">Perfil</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link tamanho" href="Login.html"> Login </a>
+                        <a class="nav-link tamanho" href="Login.html" > Login </a>
                         
                     </li>
                 </ul>
@@ -52,7 +52,6 @@
     <!-- Conteúdo da Pagina -->
     <div class="container" ng-controller="QuestionedController">
 
-
         <div class="row">
 
             <!-- Blog Entries Column -->
@@ -60,27 +59,34 @@
 
                 <h1 class="my-4">You are the last piece of the puzzle!</h1>
 
-<div class="card mb-4 quadro" ng-repeat="item in perguntas">
-                    <div class="card-body ">
-                        <p class="card-title tituloPergunta"> <B>{{item.titulo}}</B> </p>
-                        <p class="card-text"> <B> Luiz: </B> {{item.pergunta}}</p>
 
-                        <a href="#" class="btn btn-primary" ng-click="exibir = !exibir">Responder &rarr;</a>
+<div class="card mb-4 quadro" ng-repeat="item in perguntas">
+                    <div class="card-body">
+                        <p class="card-title tituloPergunta"> <B>{{item.titulo}}</B> </p>
+                        <p class="card-text"> <B> Jayane: </B> {{item.pergunta}}</p>
+                        <p class="card-text"> <B> Luiz: </B> {{item.resposta}} </p>
+                        <a href="#" class="btn btn-primary" ng-click="inserirResposta(item)">Responder &rarr;</a>
 
                         <input type="text" placeholder="Resposta" ng-model="dados.resposta" ng-show="exibir">
 
+                   <div class="row">
+                    <a onclick="corrosa(this)"><i class="fas fa-heart"></i></a>
+                    <a onclick="corazul(this)" class="icones"><i class="far fa-frown"></i></a>
+                    <a onclick="coramarelo(this)" class="icones"><i class="far fa-star"></i></a>
+                    <a onclick="corverde(this)" class="icones"><i class="fas fa-trash-alt"></i></a>
+                    <a onclick="corroxo(this)" href="chat.html" target="_blank" class="icones"><i class="far fa-comment-alt"></i></a>                        <button class="btn btn-default btn-xs dropdown-toggle denuncia" type="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
 
+                    <i class="fas fa-bullhorn"></i> <span class="caret"></span>
+  </button>
+  <ul class="dropdown-menu">
+    Denúnciar conteúdo
+  </ul>
+</div>
+  </div>
 
-
-                        <a onclick="corrosa(this)"><i class="fas fa-heart"></i>curti!</a> 
-                        <a onclick="corazul(this)"><i class="far fa-frown"></i>dislike</a>
-                        <a onclick="coramarelo(this)"><i class="far fa-star"></i>favorites</a>
-                        <a onclick="corverde(this)"><i class="fas fa-trash-alt"></i>trash</a>
-                        <a onclick="corroxo(this)"><i class="fas fa-video"></i>chat</a>
-                    </div>
                     <div class="card-footer text-muted">
                         Postado em {{item.data}} por
-                        <a href="#">Luiz</a>
+                        <a href="perfiljayane.html">Jayane</a>
                     </div>
                 </div>
 
@@ -95,80 +101,9 @@
                         <button class="btn btn-secondary" type="button" ng-click="inserirPergunta()">Postar</button>
                     </div>
                 </div>
-
-                <!-- Blog Post -->
-                        
-                <!-- Blog Post -->
- <!--                <div class="card mb-4">
-                    <div class="card-body">
-                        <p> <class="card-title"> <B> Lucas Machado:</B> O que é feudo? </p>
-                        <p class="card-text"> <B> Beatriz Campelo: </B>
-
- É a terra outorgada por um suserano ao vassalo, em troca de fidelidade e ajuda militar. Essa prática desenvolveu-se na Idade Média, após o colapso do Império Romano e foi a base para o estabelecimento de uma aristocracia fundiária. A palavra "feudo", de origem germânica (do germânico vieh, pelo frâncico fëhu, significando gado, posse, ou propriedade, pelo b.-lat. feudu, foi latinizada e no fim do século IX aparece na região do Midi (sul da França) como fevum, talvez por confusão com a palavra fiscum, que designava, à época carolíngia, os grandes domínios reais - e com uma ligação com beneficium, o que evocaria a origem pública do feudo no sul da Europa (o beneficium designa a concessão de uma terra por um agente público, em troca de serviços públicos). O feudalismo era a base rural desenvolvida na idade média. Do feudo nasceu o chamado feudalismo, que consistia numa organização política e social que se baseava na relação entre suseranos e vassalos. No feudo se produzia apenas o que seria consumido nele mesmo.
-                      </p>
-                        <a href="#" class="icones"><i class="fas fa-heart"></i>curti!</a> 
-                        <a href="#" class="icones"><i class="far fa-frown"></i>dislike</a>
-                        <a href="#" class="icones"><i class="far fa-star"></i>favorites</a>
-                         <a href="#" class="icones"><i class="fas fa-trash-alt"></i>trash</a>
-                        <a href="#" class="icones"><i class="fas fa-video"></i>chat</a>
-                    </div>
-                    <div class="card-footer text-muted">
-                        Posted on January 1, 2018 by
-                        <a href="#">Beatriz Campelo</a>
-                       
-                    </div>
-                </div>
-
-                Blog Post
-                <div class="card mb-4">
-                    <div class="card-body">
-                        <p class="card-title"> <B/> Bernardo Lopez: </B>  Pelo amor de Deus me respondam! (Uerj)
-O poliedro acima, com exatamente trinta faces quadrangulares numeradas de 1 a 30, é usado comoum dado, em um jogo. Admita que esse dado seja perfeitamente equilibradoe que, ao ser lançado, cada face tenha a mesma probabilidade de ser sorteada.
-Calcule:
-a) a probabilidade de obter um número primo ou múltiplo de 5, ao lançar esse dado uma única vez;
-b) o número de vértices do poliedro.</p>
-
-                <p class="card-title"> <B> Carla Souza: </B> Calma, vai dar tudo certo, só repirar. Vê se ajuda:
-a) O espaço amostral ² é ² = {1, 2, 3, ..., 30}
-Sejam os eventos: A: número primo B: múltiplo de 5
-Temos:
-A = { 2, 3, 5, 7, 11, 13, 17, 19, 23, 29} e B = {5, 10, 15, 20, 25, 30}
-Donde P(A) = 10/30 e P(B) = 6/30.
-Mas A º B = { 5 }, então P(A º = 1/30.
-Logo
-P(A» = P(A) + P(B) - P(A º P(A» = (10/30) + (6/30) - (1/30) = 1/2.
-b) Como F = 30, o número de arestas é dado por 2A = 4F Ì A = 60
-Da relação de Euler, temos:
-V + F = A +2
-V = 62 - 30 = 32                                    </p>         
-
-                   <div class="row">
-                                      <a href="#"><i class="fas fa-heart"></i>curti!</a>
-                     <a href="#" class="icones"><i class="far fa-frown"></i>dislike</a>
-                      <a href="#" class="icones"><i class="far fa-star"></i>favorites</a>
-                       <a href="#" class="icones"><i class="fas fa-trash-alt"></i>trash</a>
-                        <a href="#" class="icones"><i class="fas fa-video"></i>chat</a>
-                   </div>
-
-                    </div>
-                    <div class="card-footer text-muted">
-                        Posted on January 1, 2018 by
-                        <a href="#">Carla Souza</a>
-            
-                    </div>
-                </div> -->
-
-                <!-- Numeração da página -->
-                <ul class="pagination justify-content-center mb-4">
-                    <li class="page-item">
-                        <a class="page-link" href="#">&larr; Older</a>
-                    </li>
-                    <li class="page-item disabled">
-                        <a class="page-link" href="#">Newer &rarr;</a>
-                    </li>
-                </ul>
-
-            </div>
+</div>
+ 
+                
 
             <!-- Sidebar Widgets Column -->
             <div class="col-md-4">
@@ -195,8 +130,8 @@ V = 62 - 30 = 32                                    </p>
                             <div class="col-lg-6">
                                 <ul class="list-unstyled mb-0">
                                    <select class="form-control" id="sel1">
-                                        <option>Artes</option>
-                                        <option>Biologia</option>
+                                        <option>Artes</option> </a>
+                                        <option>Biologia</option> </a>  
                                         <option>Espanhol</option>
                                         <option>Filosofia</option>
                                         <option>Física</option>
@@ -218,8 +153,7 @@ V = 62 - 30 = 32                                    </p>
                 <!-- Side Widget -->
                 <div class="card my-4">
                     <a href="grupo.html">
-                     <h5 class="card-header">
-                     <button class="btn btn-secondary" type="button">+</button> </a>     Crie um grupo! </h5>
+                    <h5 class="card-header"> <button class="btn btn-secondary" type="button">+</button> </a> Crie um grupo! </h5>
                     <div class="card-body">
                         Crie um grupo para falar com seus amigos e descobrir o que eles estão fazendo!           
                               
@@ -245,15 +179,15 @@ V = 62 - 30 = 32                                    </p>
       </div>
       <div class="modal-body">
         Questioned foi desenvolvido por alunos de Ensino Médio,  com o objetivo de criar uma rede para facilitar a comunicação entre pessoas que possuem dúvidas e respostas. Se você está em busca de ajuda ou com vontade de ajudar agregando conhecimento, você veio ao lugar certo! 
-        <button id="play">Play</button>
+<!--         <button id="play">Play</button>
   <button id="pause">Pause</button>
   <button id="stop">Stop</button>
-  <br />
-  <video id="camera"></video>
+  <br /> -->
+<!--   <video id="camera"></video> -->
     </div>
-      <div class="modal-footer">
+     <!--  <div class="modal-footer">
       
-      </div>
+      </div> -->
     </div>
   </div>
 </div>
@@ -262,7 +196,7 @@ V = 62 - 30 = 32                                    </p>
     <!-- Rodapé -->
     <footer class="py-5 bg-dark">
         <div class="container">
-            <p class="m-0 text-center text-white">Copyright &copy; Questioned 2018</p>
+            <p class="m-0 text-center text-white">Copyright &copy; Questioned 2017</p>
         </div>
     </footer>
     <!-- /Rodapé -->
@@ -271,13 +205,14 @@ V = 62 - 30 = 32                                    </p>
     <script src="vendor/jquery/jquery.min.js"></script>
     <script src="vendor/popper/popper.min.js"></script>
     <script src="vendor/bootstrap/js/bootstrap.min.js"></script>
-
         <!-- é necessáro incluir o arquivo do framework -->
-        <script src="js/angular.min.js"></script>
-        <script src="js/app.js"></script>
+    <script src="js/angular.min.js"></script>
+    <script src="js/app.js"></script>
+    <script type="text/javascript" src="js/scriptCor.js"></script>
+
+    <script type="text/javascript" src="js/scriptIndex.js"></script>
 
     <!-- Importa o Javascript utilizado neste projeto -->
-    <script src="js/script.js"></script>
 <script defer src="https://use.fontawesome.com/releases/v5.0.6/js/all.js"></script>
 
 

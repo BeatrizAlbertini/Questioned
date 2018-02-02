@@ -6,8 +6,8 @@ var app = angular.module('questioned', []);
 */
 app.controller('QuestionedController', function($scope){
     //declaração de variáveis
-    $scope.exibir = false;
-    
+    $scope.exibir = true;
+
     $scope.dados = {};
     $scope.perguntas = [
     {
@@ -27,7 +27,9 @@ Francesa.
 b) Compare o movimento dos sans-culottes com o
 movimento dos sem-terra no Brasil.`, 
 data: "01/02/2018 11:25:15"
-}];
+  }
+
+];
 
     //atribuição de funções ao $scope
     $scope.inserirPergunta = function()
@@ -51,6 +53,7 @@ data: "01/02/2018 11:25:15"
     {
       pergunta.resposta = $scope.dados.resposta;
       $scope.dados.resposta = "";
+      $scope.exibir= false;
     };
 
     // $scope.fazerTarefa = function(tarefa)

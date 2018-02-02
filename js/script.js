@@ -1,67 +1,77 @@
 /* Insira seu código em javascript abaixo */
 console.log('Olá Mastertech!');
 
-	  function corrosa(btn){
-	  	if(btn.style.color == "rgb(232, 9, 46)"){
-	  		btn.style.color = "#212529";
-	  	} else {
-	  		btn.style.color = "#e8092e";
-	  	}
-	  }
+var me = {};
+me.avatar = "https://lh6.googleusercontent.com/-lr2nyjhhjXw/AAAAAAAAAAI/AAAAAAAARmE/MdtfUmC0M4s/photo.jpg?sz=48";
 
-	  function corazul(btn){
-	  	if(btn.style.color == "rgb(55, 21, 219)"){ //se a cor azul for igual ao botao estando azul
-	  		btn.style.color = "#212529"; // colocar cor preta pois foi clicado
-	  	} else {
-	  		btn.style.color = "#3715db"; // se clicar novamente coloca cor azul
-	  	}
-	  }
-	  function coramarelo(btn){
-	  	if(btn.style.color == "rgb(255, 195, 0)"){ //se a cor azul for igual ao botao estando azul
-	  		btn.style.color = "#212529"; // colocar cor preta pois foi clicado
-	  	} else {
-	  		btn.style.color = "#ffc300"; // se clicar novamente coloca cor azul
-	  	}
-	  }
+var you = {};
+you.avatar = "https://a11.t26.net/taringa/avatares/9/1/2/F/7/8/Demon_King1/48x48_5C5.jpg";
 
-function corverde(btn){
-	  	if(btn.style.color == "rgb(28, 130, 5)"){ //se a cor azul for igual ao botao estando azul
-	  		btn.style.color = "#212529"; // colocar cor preta pois foi clicado
-	  	} else {
-	  		btn.style.color = "#1c8205"; // se clicar novamente coloca cor azul
-	  	}
-	  }
+function formatAMPM(date) {
+    var hours = date.getHours();
+    var minutes = date.getMinutes();
+    var ampm = hours >= 12 ? 'PM' : 'AM';
+    hours = hours % 12;
+    hours = hours ? hours : 12; // the hour '0' should be '12'
+    minutes = minutes < 10 ? '0'+minutes : minutes;
+    var strTime = hours + ':' + minutes + ' ' + ampm;
+    return strTime;
+}            
 
-function corroxo(btn){
-	  	if(btn.style.color == "rgb(78, 21, 237)"){ //se a cor azul for igual ao botao estando azul
-	  		btn.style.color = "#212529"; // colocar cor preta pois foi clicado
-	  	} else {
-	  		btn.style.color = "#4e15ed"; // se clicar novamente coloca cor azul
-	  	}
-	  }
+//-- No use time. It is a javaScript effect.
+function insertChat(who, text, time = 0){
+    var control = "";
+    var date = formatAMPM(new Date());
+    
+    if (who == "me"){
+        
+        control = '<li style="width:100%">' +
+                        '<div class="msj macro">' +
+                        '<div class="avatar"><img class="img-circle" style="width:100%;" src="'+ me.avatar +'" /></div>' +
+                            '<div class="text text-l">' +
+                                '<p>'+ text +'</p>' +
+                                '<p><small>'+date+'</small></p>' +
+                            '</div>' +
+                        '</div>' +
+                    '</li>';                    
+    }else{
+        control = '<li style="width:100%;">' +
+                        '<div class="msj-rta macro">' +
+                            '<div class="text text-r">' +
+                                '<p>'+text+'</p>' +
+                                '<p><small>'+date+'</small></p>' +
+                            '</div>' +
+                        '<div class="avatar" style="padding:0px 0px 0px 10px !important"><img class="img-circle" style="width:100%;" src="'+you.avatar+'" /></div>' +                                
+                  '</li>';
+    }
+    setTimeout(
+        function(){                        
+            $("ul").append(control);
 
-//search
+        }, time);
+    
+}
 
+function resetChat(){
+    $("ul").empty();
+}
 
-
-    function search() {
-        let pesquisa = $('#buscar').val();
-        let filter = pesquisa.toUpperCase();
-        let p = $('.tituloPergunta');
-        let q = $('.quadro');
-        let a;
-
-        for (i = 0; i < p.length; i++) {
-            a = p[i];
-            if (a.innerHTML.toUpperCase().indexOf(filter) > -1) {
-                p[i].style.display = "";
-                q[i].style.display = "";
-
-            } else {
-                p[i].style.display = "none";
-                q[i].style.display = "none";
-            }
+$(".mytext").on("keyup", function(e){
+    if (e.which == 13){
+        var text = $(this).val();
+        if (text !== ""){
+            insertChat("me", text);              
+            $(this).val('');
         }
-           }
+    }
+});
 
- 
+//-- Clear Chat
+resetChat();
+
+//-- Print Messages
+insertChat("me", "Olá, não entendi!", 3500);  
+	insertChat("you", "Ué! oq?", 7000);
+	insertChat("me", "Tudo!! Sou um lixo em Mat!", 10500);
+	insertChat("you", "Calma! Vamos lá.",14000);
+	insertChat("me", "Meuuu, MTO obg!", 17500);
