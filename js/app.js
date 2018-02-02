@@ -27,7 +27,9 @@ Francesa.
 b) Compare o movimento dos sans-culottes com o
 movimento dos sem-terra no Brasil.`, 
 data: "01/02/2018 11:25:15"
-}];
+  }
+
+];
 
     //atribuição de funções ao $scope
     $scope.inserirPergunta = function()

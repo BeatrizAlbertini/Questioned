@@ -22,7 +22,7 @@
     <!-- Navegação -->
     <nav class="navbar navbar-expand-lg navbar-dark colornav fixed-top">
         <div class="container">
-            <a class="navbar-brand" href=""><i class="fa fa-cube navbar-brand logos"></i><B class="logo">  QUESTIONED</B></a>
+            <a class="navbar-brand" href="index.html"><i class="fa fa-cube navbar-brand logos" id="tamanhologo"></i><B class="logo">  QUESTIONED</B></a>
             <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
           <span class="navbar-toggler-icon"></span>
         </button>
@@ -37,7 +37,7 @@
                         <a class="nav-link tamanho" href="#" data-toggle="modal" data-target="#exampleModal" >Sobre</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link tamanho" href="#">Perfil</a>
+                        <a class="nav-link tamanho" href="perfiljayane.html">Perfil</a>
                     </li>
                     <li class="nav-item">
                         <a class="nav-link tamanho" href="Login.html" target="_blank"> Login </a>
@@ -62,8 +62,8 @@
 <div class="card mb-4" ng-repeat="item in perguntas">
                     <div class="card-body">
                         <p class="card-title"> <B>{{item.titulo}}</B> </p>
-                        <p class="card-text"> <B> Luiz: </B> {{item.pergunta}}</p>
-                        <p class="card-text"> <B> Bia: </B> {{item.resposta}} </p>
+                        <p class="card-text"> <B> Jayane: </B> {{item.pergunta}}</p>
+                        <p class="card-text"> <B> Luiz: </B> {{item.resposta}} </p>
                         <a href="#" class="btn btn-primary" ng-click="inserirResposta(item)">Responder &rarr;</a>
 
                         <input type="text" placeholder="Resposta" ng-model="dados.resposta" ng-show="exibir">
@@ -85,7 +85,7 @@
   </div>
                     <div class="card-footer text-muted">
                         Postado em {{item.data}} por
-                        <a href="#">Luiz</a>
+                        <a href="perfiljayane.html">Jayane</a>
                     </div>
                 </div>
 
@@ -129,8 +129,8 @@
                             <div class="col-lg-6">
                                 <ul class="list-unstyled mb-0">
                                    <select class="form-control" id="sel1">
-                                        <option>Artes</option> 
-                                        <option>Biologia</option>
+                                        <option>Artes</option> </a>
+                                        <option>Biologia</option> </a>  
                                         <option>Espanhol</option>
                                         <option>Filosofia</option>
                                         <option>Física</option>
@@ -151,7 +151,8 @@
 
                 <!-- Side Widget -->
                 <div class="card my-4">
-                    <h5 class="card-header"> <button class="btn btn-secondary" type="button">+</button> Crie um grupo! </h5>
+                    <a href="grupo.html">
+                    <h5 class="card-header"> <button class="btn btn-secondary" type="button">+</button> </a> Crie um grupo! </h5>
                     <div class="card-body">
                         Crie um grupo para falar com seus amigos e descobrir o que eles estão fazendo!           
                               
