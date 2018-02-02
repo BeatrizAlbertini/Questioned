@@ -30,8 +30,8 @@
                 <ul class="navbar-nav ml-auto">
                     <li class="nav-item active">
                         <a class="nav-link tamanho" href="#">Home
-                <span class="sr-only">(current)</span>
-              </a>
+                            <span class="sr-only">(current)</span>
+                        </a>
                     </li>
                     <li class="nav-item">
                         <a class="nav-link tamanho" href="#" data-toggle="modal" data-target="#exampleModal" >Sobre</a>
@@ -70,11 +70,11 @@
 
 
                    <div class="row">
-                                      <a href="#"><i class="fas fa-heart"></i></a>
-                     <a href="#" class="icones"><i class="far fa-frown"></i></a>
-                      <a href="#" class="icones"><i class="far fa-star"></i></a>
-                       <a href="#" class="icones"><i class="fas fa-trash-alt"></i></a>
-                        <a href="chat.html" target="_blank" class="icones"><i class="far fa-comment-alt"></i>chat</a>                        <button class="btn btn-default btn-xs dropdown-toggle denuncia" type="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                    <a onclick="corrosa(this)"><i class="fas fa-heart"></i></a>
+                    <a onclick="corazul(this)" class="icones"><i class="far fa-frown"></i></a>
+                    <a onclick="coramarelo(this)" class="icones"><i class="far fa-star"></i></a>
+                    <a onclick="corverde(this)" class="icones"><i class="fas fa-trash-alt"></i></a>
+                    <a onclick="corroxo(this)" href="chat.html" target="_blank" class="icones"><i class="far fa-comment-alt"></i></a>                        <button class="btn btn-default btn-xs dropdown-toggle denuncia" type="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
 
                     <i class="fas fa-bullhorn"></i> <span class="caret"></span>
   </button>
@@ -200,6 +200,7 @@
         <!-- é necessáro incluir o arquivo do framework -->
     <script src="js/angular.min.js"></script>
     <script src="js/app.js"></script>
+    <script type="text/javascript" src="js/scriptCor.js"></script>
 
     <!-- Importa o Javascript utilizado neste projeto -->
 <script defer src="https://use.fontawesome.com/releases/v5.0.6/js/all.js"></script>
