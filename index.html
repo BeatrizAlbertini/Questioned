@@ -22,7 +22,9 @@
     <!-- Navegação -->
     <nav class="navbar navbar-expand-lg navbar-dark colornav fixed-top">
         <div class="container">
-            <a class="navbar-brand" href="index.html"><i class="fa fa-cube navbar-brand logos tamanho-logo"></i><B class="logo">  QUESTIONED</B></a>
+
+            <a class="navbar-brand" href=""><i class="fa fa-cube colorshadow" id="tamanho-logo"></i><B class="logo">  QUESTIONED</B></a>
+
             <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
           <span class="navbar-toggler-icon"></span>
         </button>
@@ -40,7 +42,7 @@
                         <a class="nav-link tamanho" href="perfiljayane.html">Perfil</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link tamanho" href="Login.html" target="_blank"> Login </a>
+                        <a class="nav-link tamanho" href="Login.html" > Login </a>
                         
                     </li>
                 </ul>
@@ -59,15 +61,15 @@
 
                 <h1 class="my-4">You are the last piece of the puzzle!</h1>
 
-<div class="card mb-4" ng-repeat="item in perguntas">
+
+<div class="card mb-4 quadro" ng-repeat="item in perguntas">
                     <div class="card-body">
-                        <p class="card-title"> <B>{{item.titulo}}</B> </p>
+                        <p class="card-title tituloPergunta"> <B>{{item.titulo}}</B> </p>
                         <p class="card-text"> <B> Jayane: </B> {{item.pergunta}}</p>
                         <p class="card-text"> <B> Luiz: </B> {{item.resposta}} </p>
                         <a href="#" class="btn btn-primary" ng-click="inserirResposta(item)">Responder &rarr;</a>
 
                         <input type="text" placeholder="Resposta" ng-model="dados.resposta" ng-show="exibir">
-
 
                    <div class="row">
                     <a onclick="corrosa(this)"><i class="fas fa-heart"></i></a>
@@ -83,6 +85,7 @@
   </ul>
 </div>
   </div>
+
                     <div class="card-footer text-muted">
                         Postado em {{item.data}} por
                         <a href="perfiljayane.html">Jayane</a>
@@ -112,7 +115,7 @@
                     <h5 class="card-header">Buscar</h5>
                     <div class="card-body">
                         <div class="input-group">
-                            <input type="text" class="form-control" placeholder="Search for...">
+                            <input type="text" class="form-control" placeholder="Search for..." id="buscar" onkeyup="search()">
                             <span class="input-group-btn">
                   <button class="btn btn-secondary" type="button">Go!</button>
                 </span>
@@ -171,16 +174,22 @@
   <div class="modal-dialog" role="document">
     <div class="modal-content">
       <div class="modal-header colornav">
-        <h5 class="modal-title" id="exampleModalLabel"><i class="fa fa-cube tamanho-logo colorshadow colorLogin"></i>Quem somos nós</h5>
+        <h5 class="modal-title" id="exampleModalLabel"><i class="fa fa-cube  colorLogin" id="tamanho-logo"></i>   Quem somos nós</h5>
         <button type="button" class="close" data-dismiss="modal" aria-label="Close">
           <span aria-hidden="true">&times;</span>
         </button>
       </div>
       <div class="modal-body">
-        Questioned foi desenvolvido por alunos de Ensino Médio,  com o objetivo de criar uma rede para facilitar a comunicação entre pessoas que possuem dúvidas e respostas. Se você está em busca de ajuda ou com vontade de ajudar agregando conhecimento, você veio ao lugar certo! </div>
-      <div class="modal-footer">
+        Questioned foi desenvolvido por alunos de Ensino Médio,  com o objetivo de criar uma rede para facilitar a comunicação entre pessoas que possuem dúvidas e respostas. Se você está em busca de ajuda ou com vontade de ajudar agregando conhecimento, você veio ao lugar certo! 
+<!--         <button id="play">Play</button>
+  <button id="pause">Pause</button>
+  <button id="stop">Stop</button>
+  <br /> -->
+<!--   <video id="camera"></video> -->
+    </div>
+     <!--  <div class="modal-footer">
       
-      </div>
+      </div> -->
     </div>
   </div>
 </div>
@@ -202,6 +211,8 @@
     <script src="js/angular.min.js"></script>
     <script src="js/app.js"></script>
     <script type="text/javascript" src="js/scriptCor.js"></script>
+
+    <script type="text/javascript" src="js/scriptIndex.js"></script>
 
     <!-- Importa o Javascript utilizado neste projeto -->
 <script defer src="https://use.fontawesome.com/releases/v5.0.6/js/all.js"></script>

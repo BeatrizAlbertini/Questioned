@@ -1,6 +1,6 @@
 /* Insira seu código em javascript abaixo */
-
 console.log('Olá Mastertech!');
+
 var me = {};
 me.avatar = "https://lh6.googleusercontent.com/-lr2nyjhhjXw/AAAAAAAAAAI/AAAAAAAARmE/MdtfUmC0M4s/photo.jpg?sz=48";
 
