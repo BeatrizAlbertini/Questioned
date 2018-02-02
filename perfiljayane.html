@@ -24,15 +24,16 @@
 <body id="page-top">
 
     <!-- Navegação -->
-    <nav class="navbar navbar-expand-lg navbar-light fixed-top navbar-expand-lg navbar-dark colornav fixed-top" id="mainNav">
-            <a class="navbar-brand" href=""><i class="fa fa-cube tamanho-logo colorshadow"></i><B class="logo">  QUESTIONED</B></a>
+    <nav class="navbar navbar-expand-lg navbar-dark colornav fixed-top">
+        <div class="container">
+            <a class="navbar-brand" href=""><i class="fa fa-cube navbar-brand logos"></i><B class="logo">QUESTIONED</B></a>
             <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
           <span class="navbar-toggler-icon"></span>
         </button>
             <div class="collapse navbar-collapse" id="navbarResponsive">
-                <ul class="navbar-nav ml-auto">
+                <ul class="navbar-nav">
                     <li class="nav-item active">
-                        <a class="nav-link tamanho" href="#">Home
+                        <a class="nav-link tamanho" href="index.html">Home
                 <span class="sr-only">(current)</span>
               </a>
                     </li>
@@ -40,13 +41,10 @@
                         <a class="nav-link tamanho" href="#" data-toggle="modal" data-target="#exampleModal" >Sobre</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link tamanho" href="#">Perfil</a>                        
+                        <a class="nav-link tamanho" href="perfil.html">Perfil</a>
                     </li>
-                </ul>
-            </div>
-        </div>
-    </nav>
-                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link tamanho" href="Login.html" target="_blank"> Login </a>
                         
                     </li>
                 </ul>
@@ -384,7 +382,24 @@
         </div>
     </div>
     <!-- /Portfolio Modals -->
-
+    <!-- Modal -->
+<div class="modal fade" id="exampleModal" tabindex="-1" role="dialog " aria-labelledby="exampleModalLabel" aria-hidden="true">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+      <div class="modal-header colornav">
+        <h5 class="modal-title" id="exampleModalLabel"><i class="fa fa-cube tamanho-logo colorshadow colorLogin"></i>Quem somos nós</h5>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body">
+        Questioned foi desenvolvido por alunos de Ensino Médio,  com o objetivo de criar uma rede para facilitar a comunicação entre pessoas que possuem dúvidas e respostas. Se você está em busca de ajuda ou com vontade de ajudar agregando conhecimento, você veio ao lugar certo! </div>
+      <div class="modal-footer">
+      
+      </div>
+    </div>
+  </div>
+</div>
     <!-- Bootstrap core JavaScript -->
     <script src="vendor/jquery/jquery.min.js"></script>
     <script src="vendor/popper/popper.min.js"></script>

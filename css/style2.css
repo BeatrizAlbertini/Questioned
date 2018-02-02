@@ -30,7 +30,7 @@ i.tamanho-logo{
 
 @media (min-width: 992px) {
     body {
-        padding-top: 100px;
+        /*padding-top: 100px;*/
     }
 }
 .styleLogin
@@ -708,9 +708,24 @@ fieldset[disabled] .btn-success:hover {
 }
 .online{
     color: green;
+    margin-top: 72px;
 }
 
 .circulo{
     font-size: 10px;
+}
+
+.logos {
+    font-size: 6vh;
+}
+
+.tamanho-foto{
+    width: 26% !important;
+    height: 9% !important;
+}
+
+.tamanho-foto2{
+        width: 27%;
+    height: 90px;
 }
 /* Fim do meu CSS */
