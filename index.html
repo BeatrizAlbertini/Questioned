@@ -22,7 +22,7 @@
     <!-- Navegação -->
     <nav class="navbar navbar-expand-lg navbar-dark colornav fixed-top">
         <div class="container">
-            <a class="navbar-brand" href=""><i class="fa fa-cube tamanho-logo colorshadow"></i><B class="logo">  QUESTIONED</B></a>
+            <a class="navbar-brand" href=""><i class="fa fa-cube colorshadow" id="tamanho-logo"></i><B class="logo">  QUESTIONED</B></a>
             <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
           <span class="navbar-toggler-icon"></span>
         </button>
@@ -60,9 +60,9 @@
 
                 <h1 class="my-4">You are the last piece of the puzzle!</h1>
 
-<div class="card mb-4" ng-repeat="item in perguntas">
-                    <div class="card-body">
-                        <p class="card-title"> <B>{{item.titulo}}</B> </p>
+<div class="card mb-4 quadro" ng-repeat="item in perguntas">
+                    <div class="card-body ">
+                        <p class="card-title tituloPergunta"> <B>{{item.titulo}}</B> </p>
                         <p class="card-text"> <B> Luiz: </B> {{item.pergunta}}</p>
 
                         <a href="#" class="btn btn-primary" ng-click="exibir = !exibir">Responder &rarr;</a>
@@ -72,11 +72,11 @@
 
 
 
-                        <a href="#"><i class="fas fa-heart"></i>curti!</a> 
-                        <a href="#"><i class="far fa-frown"></i>dislike</a>
-                        <a href="#"><i class="far fa-star"></i>favorites</a>
-                        <a href="#"><i class="fas fa-trash-alt"></i>trash</a>
-                        <a href="#"><i class="fas fa-video"></i>chat</a>
+                        <a onclick="corrosa(this)"><i class="fas fa-heart"></i>curti!</a> 
+                        <a onclick="corazul(this)"><i class="far fa-frown"></i>dislike</a>
+                        <a onclick="coramarelo(this)"><i class="far fa-star"></i>favorites</a>
+                        <a onclick="corverde(this)"><i class="fas fa-trash-alt"></i>trash</a>
+                        <a onclick="corroxo(this)"><i class="fas fa-video"></i>chat</a>
                     </div>
                     <div class="card-footer text-muted">
                         Postado em {{item.data}} por
@@ -178,7 +178,7 @@ V = 62 - 30 = 32                                    </p>
                     <h5 class="card-header">Buscar</h5>
                     <div class="card-body">
                         <div class="input-group">
-                            <input type="text" class="form-control" placeholder="Search for...">
+                            <input type="text" class="form-control" placeholder="Search for..." id="buscar" onkeyup="search()">
                             <span class="input-group-btn">
                   <button class="btn btn-secondary" type="button">Go!</button>
                 </span>
@@ -238,13 +238,19 @@ V = 62 - 30 = 32                                    </p>
   <div class="modal-dialog" role="document">
     <div class="modal-content">
       <div class="modal-header colornav">
-        <h5 class="modal-title" id="exampleModalLabel"><i class="fa fa-cube tamanho-logo colorshadow colorLogin"></i>   Quem somos nós</h5>
+        <h5 class="modal-title" id="exampleModalLabel"><i class="fa fa-cube  colorLogin" id="tamanho-logo"></i>   Quem somos nós</h5>
         <button type="button" class="close" data-dismiss="modal" aria-label="Close">
           <span aria-hidden="true">&times;</span>
         </button>
       </div>
       <div class="modal-body">
-        Questioned foi desenvolvido por alunos de Ensino Médio,  com o objetivo de criar uma rede para facilitar a comunicação entre pessoas que possuem dúvidas e respostas. Se você está em busca de ajuda ou com vontade de ajudar agregando conhecimento, você veio ao lugar certo! </div>
+        Questioned foi desenvolvido por alunos de Ensino Médio,  com o objetivo de criar uma rede para facilitar a comunicação entre pessoas que possuem dúvidas e respostas. Se você está em busca de ajuda ou com vontade de ajudar agregando conhecimento, você veio ao lugar certo! 
+        <button id="play">Play</button>
+  <button id="pause">Pause</button>
+  <button id="stop">Stop</button>
+  <br />
+  <video id="camera"></video>
+    </div>
       <div class="modal-footer">
       
       </div>

@@ -27,7 +27,7 @@ body {
 	font-size: 20px;
 }
 
-i.tamanho-logo{
+#tamanho-logo{
 	font-size: 6vh;
 }
 /*Ajusta o layout de acordo com o tamanho da tela*/
@@ -44,10 +44,6 @@ i.tamanho-logo{
 
 .colorLogin{
 	color: white;
-}
-
-.colorshadow{
-	text-shadow: 2px 2px #000
 }
 
 .colornav{
