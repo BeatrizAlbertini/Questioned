@@ -13,7 +13,7 @@ body {
 .logo{
 	font-size: 33px;
     text-shadow: 2px 2px #000;
-}
+    }
 
 .icones{
 	margin-left: 30px;
@@ -27,8 +27,8 @@ body {
 	font-size: 20px;
 }
 
-i.tamanho-logo{
-	font-size: 100px;
+#tamanho-logo{
+	font-size: 6vh;
 }
 /*Ajusta o layout de acordo com o tamanho da tela*/
 
@@ -44,10 +44,6 @@ i.tamanho-logo{
 
 .colorLogin{
 	color: white;
-}
-
-.colorshadow{
-	text-shadow: 2px 2px #000
 }
 
 .colornav{
@@ -188,5 +184,9 @@ input:focus{
 
 .row{
     /*margin-left: 37.5%*/
+}
+
+#tamanhologo {
+	font-size: 6vh;
 }
 /* Fim do meu CSS */
